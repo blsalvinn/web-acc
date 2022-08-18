@@ -10,18 +10,8 @@ function App() {
   return (
     <>
       <div className="App">
-        <header className="App-header">
-          {/* <MyComponent /> */}
-          <Header />
-        </header>
-
-        <body className="App-body">
-          <div className="body">this is body</div>
-        </body>
-
-        <footer className="App-footer">
-          <Footer />
-        </footer>
+        <Header />
+        <Footer />
       </div>
     </>
   );
