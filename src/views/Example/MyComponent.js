@@ -5,6 +5,7 @@ import ChildComponent3 from './childs/ChildComponent2';
 import funcHello from './childs/childs-of-child/funcHello';
 import ChildOfChildComponent from './childs/childs-of-child/ChildOfChildComponent';
 // import ChildOfChildComponent2 from '';
+import Header from '../../components/Header';
 import ReactDOM from 'react-dom';
 class MyComponent extends React.Component {
  
@@ -62,6 +63,7 @@ class MyComponent extends React.Component {
       <ChildComponent2 />
       <ChildOfChildComponent />
       <ChildComponent3 />
+      <Header />
       </>
     );
   }

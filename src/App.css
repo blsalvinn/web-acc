@@ -13,7 +13,9 @@
   }
 }
 
-.App-header {
+.App-header,
+.App-footer,
+.App-bodyu {
   background-color: #181f2c;
   min-height: 100vh;
   display: flex;

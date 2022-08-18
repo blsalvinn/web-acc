@@ -34,7 +34,7 @@ class ChildOfChildComponent extends React.Component {
     // }
     return (
       <>
-      hello
+      hello MyComponent
         {/* <div style={style}>
           <img src={this.props.img_url} height="250px" />
           <h1>{this.props.title}</h1>
