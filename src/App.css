@@ -1,12 +1,14 @@
 .App {
   text-align: center;
 }
+
 ul,
 li,
 a {
   text-decoration: none;
   list-style-type: none;
 }
+
 .App-logo {
   height: 25vmin;
   pointer-events: none;
@@ -21,11 +23,11 @@ a {
 .App {
   background-color: #ffffff;
   /* min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin); */
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+font-size: calc(10px + 2vmin); */
   color: rgb(0, 0, 0);
 }
 
@@ -37,32 +39,69 @@ a {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
+
 .header__inner {
   display: flex;
   padding: 10px 30px;
   align-items: center;
 }
+
 .header__logo img {
   max-width: 150px;
 }
+
 .header__nav {
   display: flex;
   justify-content: right;
   width: 100%;
 }
-.header__nav li {
+
+.header__nav > a.action {
   padding: 10px;
   border: 1px solid #61dafb;
   margin: 0 15px;
   cursor: pointer;
 }
-.header__nav li:hover {
+
+.header__nav nav ul a {
+  display: flex;
+  padding-left: .75rem;
+  padding-right: .75rem;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+}
+.header__nav a.action {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;  
+  background: #fff;
+  border-radius: 6px;
+  padding: 11px 25px;
+}
+.header__nav nav ul {
+  display: flex;
+}
+
+.header__nav>a.action:hover {
   background-color: #49111c;
 }
-.header__nav li:hover a{
-  color: #f2f4f3;
+
+.header__nav a.action:hover {
+  color: #fff;
+}
+.header__nav ul li:hover a {
+  color: #2E2755;
+}
+.Banner img {
+  max-width: 500px;
+  margin: 0 auto;
+}
+.infor {
+  margin-top: 50px;
 }
