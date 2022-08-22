@@ -10,7 +10,7 @@ class Header extends React.Component {
 	render() {
 		let dataOutPutBanner = this.props;
 		let dataOutPutBanner_ = this.props.dataOutPutBanner;
-		console.log(dataOutPutBanner_)
+		// console.log(dataOutPutBanner_)
 		
 		const settings = {
 			infinite: true,

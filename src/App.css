@@ -61,7 +61,7 @@ font-size: calc(10px + 2vmin); */
   width: 100%;
 }
 
-.header__nav > a.action {
+.header__nav>a.action {
   padding: 10px;
   border: 1px solid #61dafb;
   margin: 0 15px;
@@ -76,14 +76,16 @@ font-size: calc(10px + 2vmin); */
   font-size: 16px;
   line-height: 18px;
 }
+
 .header__nav a.action {
   font-weight: 700;
   font-size: 16px;
-  line-height: 18px;  
+  line-height: 18px;
   background: #fff;
   border-radius: 6px;
   padding: 11px 25px;
 }
+
 .header__nav nav ul {
   display: flex;
 }
@@ -95,13 +97,45 @@ font-size: calc(10px + 2vmin); */
 .header__nav a.action:hover {
   color: #fff;
 }
+
 .header__nav ul li:hover a {
   color: #2E2755;
 }
+
 .Banner img {
   max-width: 500px;
   margin: 0 auto;
 }
+
 .infor {
   margin-top: 50px;
+}
+
+.line-title {
+  margin-bottom: .5rem;
+}
+
+.infor .title-product h2 {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 800;
+}
+
+.list-product .product {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  gap: .5rem;
+}
+
+.infor .container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.list-product .product .col-pro {
+  background-image: url('assets/images/box-pro.png');
+  background-size: 100% 100% !important;
+  grid-column: span 2/span 2;
+  padding: .5rem;
+  border-radius: .125rem;
 }
