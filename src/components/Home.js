@@ -1,23 +1,37 @@
 import React from 'react';
 // import  logo  from '../assets/images/logo.png';
-// import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom';
 import Banner from '../views/Banner';
 import gold from '../assets/rank/gold.png';
-import master from '../assets/rank/master.webp';
-import grand_master from '../assets/rank/grand-master.png';
-import diamond from '../assets/rank/diamond.webp';
-import challenger from '../assets/rank/challenger.webp';
-import platium from '../assets/rank/platium.webp';
-class Home extends React.Component {
-	
-	render() {
-		let dataOutPut = this.props;
-		let dataOutPut_ = this.props.dataOutPut;
-		let dataCate_ = this.props.dataCate;
-		// let numCate = dataCate_.length;
-		console.log(dataCate_)
+// import master from '../assets/rank/master.webp';
+// import grand_master from '../assets/rank/grand-master.png';
+// import diamond from '../assets/rank/diamond.webp';
+// import challenger from '../assets/rank/challenger.webp';
+// import platium from '../assets/rank/platium.webp';
+const value_query = `
+{
+  products {
+    nodes {
+      id
+      name
+      skin {
+        champion
+        skin
+      }
+      productCategories {
+        nodes {
+          name
+        }
+      }
+    }
+  }
+}
+`
+const Home = () => {
+		let dataOutPut_ = useDataChap(); 
 		return (
 			<>
+			<Banner />
 				<div className="infor">
 					<div className="container">
 						<div className="title-product">
@@ -28,7 +42,7 @@ class Home extends React.Component {
 						</div>
 						<div className="list-product">
 							<div className="product">
-								<img src={gold} className="rank"></img>
+								{/* <img src={gold} className="rank"></img> */}
 								{
 									dataOutPut_.map((item, index) => {
 										return (
@@ -48,10 +62,20 @@ class Home extends React.Component {
 						</div>
 					</div>
 				</div>
-				{/* <ChildOfChildComponent /> */}
+				
 			</>
 		);
 	}
-}
-
+function useDataChap() {
+	const [dataChamp, setData] = React.useState([]);
+	React.useEffect(() => {
+	  fetch('http://localhost/web-shop/wordpress/graphql', {
+		method: "POST",
+		headers: { "Content-Type": "application/json" },
+		body: JSON.stringify({ query: value_query })
+	  }).then(response => response.json())
+		.then(data => setData(data.data.products.nodes))
+	}, []);
+	return dataChamp;
+  }
 export default Home;

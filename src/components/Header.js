@@ -1,24 +1,28 @@
 import React from 'react';
 import logo from '../assets/images/logo.png';
 import ReactDOM from 'react-dom';
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import Banner from '../views/Banner';
+import Support from '../views/Support';
 class Header extends React.Component {
 
 	render() {
-		let dataOutPut = this.props
 		return (
 			<>
-				{/* {console.log(dataOutPut)} */}
 				<div className="header">
 					<div className="header__inner container">
 						<div className="header__logo">
-							<img src={logo} alt="" />
+							<Link to="/home">
+								<img src={logo} alt="">
+								</img>
+							</Link>
 						</div>
 						<div className="header__nav">
 							<nav className="menu-toggle">
 								<ul className="item-center">
-									<li><a href="index.html" className="">Home</a></li>
-									<li><a href="login.html" className="">Support</a></li>
-									<li><a href="huong-dan-mua-acc.html" className="">Contact</a></li>
+									<li><Link to="/home">Home</Link></li>
+									<li><Link to="/support">Support</Link></li>
 								</ul>
 							</nav>
 							<a href="#" className="action login">Login</a>
