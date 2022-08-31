@@ -14,8 +14,8 @@ class Header extends React.Component {
 					<div className="header__inner container">
 						<div className="header__logo">
 							<Link to="/home">
-								<img src={logo} alt="">
-								</img>
+								{/* <img src={logo} alt=""></img> */}
+								<h3 className="logo-home">Panda</h3>
 							</Link>
 						</div>
 						<div className="header__nav">

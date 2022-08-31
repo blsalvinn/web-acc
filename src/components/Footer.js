@@ -5,7 +5,7 @@ class Footer extends React.Component {
 
     return (
       <>
-		<div className="app-header">this is footer</div>
+		<div className="app-header">@2022 Panda Shop</div>
       </>
     );
   }
